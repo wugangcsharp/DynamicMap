@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{28E260D7-D65C-F6BB-55AF-92F3E61A1DAA}") = "DynamicMap", "Assembly-CSharp-vs.csproj", "{1D2B08FD-408D-557B-6142-FD0F2A92E035}"
 EndProject
+Project("{28E260D7-D65C-F6BB-55AF-92F3E61A1DAA}") = "DynamicMap", "Assembly-CSharp-Editor-vs.csproj", "{AE55B36B-25CD-40D7-A83B-309AB9D95F19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{1D2B08FD-408D-557B-6142-FD0F2A92E035}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D2B08FD-408D-557B-6142-FD0F2A92E035}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D2B08FD-408D-557B-6142-FD0F2A92E035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE55B36B-25CD-40D7-A83B-309AB9D95F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE55B36B-25CD-40D7-A83B-309AB9D95F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE55B36B-25CD-40D7-A83B-309AB9D95F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE55B36B-25CD-40D7-A83B-309AB9D95F19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-											GlobalSection(MonoDevelopProperties) = preSolution
+																	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

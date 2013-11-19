@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
 	public static int m_Current_Terrain;
 	public static float m_timer=3;
 	
-	private int m_MaxTerrainCount=5;
+	private int m_MaxTerrainCount=10;
 	// Use this for initialization
 	void Start () {
 		m_Current_Terrain=GameObject.FindGameObjectsWithTag("Terrain").Length;

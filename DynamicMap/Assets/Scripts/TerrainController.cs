@@ -13,9 +13,9 @@ public class TerrainController : MonoBehaviour {
 		m_transform.Translate(Vector3.left*Time.deltaTime);
 	}
 	void OnBecameInvisible(){
-        //GameManager.m_Current_Terrain-=1;
-        //GameManager.m_timer=0;
-        //Destroy(this.gameObject);
+        GameManager.m_Current_Terrain-=1;
+        GameManager.m_timer=0;
+        Destroy(this.gameObject);
 	}
 	void OnTriggerEnter(){
         //GameManager.m_Current_Terrain-=1;

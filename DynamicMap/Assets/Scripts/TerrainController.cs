@@ -12,6 +12,9 @@ public class TerrainController : MonoBehaviour {
 	void Update () {
 		m_transform.Translate(Vector3.left*Time.deltaTime);
 	}
+	/// <summary>
+	/// 当地形在摄像机中不可见时，销毁该地形
+	/// </summary>
 	void OnBecameInvisible(){
         GameManager.m_Current_Terrain-=1;
         GameManager.m_timer=0;

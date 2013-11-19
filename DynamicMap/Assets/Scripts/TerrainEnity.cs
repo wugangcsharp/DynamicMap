@@ -29,7 +29,6 @@ public class TerrainEnity : MonoBehaviour {
 	public  TerrainEnity(float maxX)
 	{
 		float x,y,z;
-		
 		#region 大小
 		x=Random.Range(1f,7.5f);
 		y=1;

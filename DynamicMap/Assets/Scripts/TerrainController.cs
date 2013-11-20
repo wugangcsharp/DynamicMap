@@ -10,7 +10,7 @@ public class TerrainController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		m_transform.Translate(Vector3.left*Time.deltaTime);
+		m_transform.Translate(Vector3.left*Time.deltaTime*2);
 	}
 	/// <summary>
 	/// 当地形在摄像机中不可见时，销毁该地形

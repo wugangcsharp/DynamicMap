@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
 	/// <summary>
 	/// 生成地形时间间隔
 	/// </summary>
-	public static float m_timer=3;
+	public static float m_timer=1f;
 	/// <summary>
 	/// 地形总个数
 	/// </summary>

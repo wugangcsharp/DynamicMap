@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     CurrentDevice _CurrentDevice = new CurrentDevice();
 
     private Rigidbody m_rigidbody;
+	private bool canJump;
+	private float beginX;
+	private float endX;
     void Awake()
     {
 #if UNITY_ANDROID
@@ -34,30 +37,40 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+		canJump=true;
         m_rigidbody = this.transform.rigidbody;
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch (_CurrentDevice)
-        {
-            case CurrentDevice.ANDROID:
-                if (Input.touchCount > 0)
-                {
-                    m_rigidbody.AddForce(new Vector3(0, 1, 0) * jump);
-                }
-                break;
-            case CurrentDevice.Editor:
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    m_rigidbody.AddForce(new Vector3(0, 1, 0) * jump);
-                }
-                break;
-            default:
-                break;
-        }
+		if(canJump){
+	        switch (_CurrentDevice)
+	        {
+	            case CurrentDevice.ANDROID:
+	                if (Input.touchCount > 0)
+	                {
+	                    m_rigidbody.AddForce(new Vector3(0, 1, 0) * jump);
+						canJump=false;
+	                }
+	                break;
+	            case CurrentDevice.Editor:
+	                if (Input.GetKeyDown(KeyCode.Space))
+	                {
+	                    m_rigidbody.AddForce(new Vector3(0, 1, 0) * jump);
+						canJump=false;
+	                }
+	                break;
+	            default:
+	                break;
+	        }
+		} 
     }
+	void OnCollisionEnter(Collision _collision){
+		if(_collision.collider.tag.CompareTo("Terrain")==0){
+			canJump=true;
+		}
+	}
 }
 
 public enum CurrentDevice

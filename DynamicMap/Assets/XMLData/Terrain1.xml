@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+	<!--地形坐标和地形大小信息-->	
+	<!--
+	PX:Position X
+	PY:Position Y
+	SX:Scale X
+	SY:Scale Y
+	-->	
+<root>
+  	<terrain Id="0" PX="Position X" PY="2" SX="1" SY="3"></terrain>
+</root>

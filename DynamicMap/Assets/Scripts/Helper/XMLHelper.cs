@@ -2,38 +2,32 @@
 using System.Collections;
 using System.Xml;
 
-public class XMLHelper : MonoBehaviour {
-
-	// Use this for initialization
+public class XMLHelper : MonoBehaviour
+{
+    XmlDocument doc;
+	
+	XmlNodeList nodeList;
+	 
+    // Use this for initialization
     void Start()
     {
-        XmlDocument doc = new XmlDocument();
-        doc.Load("E:\\test.xml");
-        foreach (XmlNode node in doc.GetElementsByTagName("packet"))
-            GetNodes(node);
+        doc = new XmlDocument();
+        doc.Load(Application.dataPath+@"/XMLData/Terrain1.xml");
+		nodeList=doc.SelectSingleNode("root").ChildNodes;
     }
-    static void GetNodes(XmlNode node)
+
+    void OnGUI()
     {
-        XmlAttribute showname = node.Attributes["showname"];
-        XmlAttribute show = node.Attributes["show"];
-        XmlAttribute value = node.Attributes["value"];
-        if (showname != null || show != null || value != null)
-        {
-            //Console.Write("tagname:{0} ", node.Name);
-            //if (showname != null)
-            //    Console.Write("showname:{0} ", showname.Value);
-            //if (show != null)
-            //    Console.Write("show:{0} ", show.Value);
-            //if (value != null)
-            //    Console.Write("value:{0} ", value.Value);
-            //Console.WriteLine();
-        }
-        foreach (XmlNode xn in node.ChildNodes)
-            GetNodes(xn);
+		if(nodeList==null)return;
+//		for (int i = 0; i < parentNode.ChildNodes.Count; i++) {
+//			 XmlNode  node=parentNode.ChildNodes[i];
+//			  XmlAttribute PX = node.Attributes["PX"];
+//			  GUI.Label(new Rect(100, 100, 300, 40), PX.Value);
+//		}
+		
+		foreach (XmlNode node in nodeList) {
+			 XmlAttribute  px=node.Attributes["PX"];
+			 GUI.Label(new Rect(100, 100, 300, 40), px.Value);
+		}
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

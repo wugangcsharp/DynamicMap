@@ -41,7 +41,10 @@ public class TerrainEnity : MonoBehaviour {
 		y=Random.Range(-4.370596f,-3.120014f);
 		z=0;
 		#endregion
-		P_Vector3=new Vector3(x+S_Vector3.x/2,y,z);
+		
+		float marrginX=S_Vector3.x;
+		marrginX=Mathf.Lerp(0, 3, marrginX);
+		P_Vector3=new Vector3(x+marrginX*1.5f,y,z);
 		
 			
 		

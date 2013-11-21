@@ -38,13 +38,12 @@ public class TerrainEnity : MonoBehaviour {
 		
 		#region 位置
 		x=maxX;
-		y=Random.Range(-4.370596f,-3.120014f);
+		y=Random.Range(-4.0f,-3.120014f);
 		z=0;
 		#endregion
 		
-		float marrginX=S_Vector3.x;
-		marrginX=Mathf.Lerp(0, 3, marrginX);
-		P_Vector3=new Vector3(x+marrginX*1.5f,y,z);
+	 
+		P_Vector3=new Vector3(x,y,z);
 		
 			
 		
